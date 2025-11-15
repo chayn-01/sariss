@@ -1,0 +1,193 @@
+/* Custom Google Font - Inter for a modern, clean look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define color variables for Dark Minimalist Theme */
+    --color-primary: #9d4edd;    
+    --color-secondary: #00ffc8;  
+    --color-background: #1a1a2e; 
+    --color-card-bg: #2c3347;    
+    --color-text: #e6e6e6;       
+    --color-text-subtle: #b0b0b0; 
+    --color-required: #ff4d4d;   
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--color-text);
+    background-color: var(--color-background); 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Main content wrapper */
+.main-wrapper {
+    width: 100%;
+    max-width: 750px;
+    padding: 0;
+}
+
+/* Header/Title styles */
+.header-content {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: var(--color-card-bg); 
+    color: var(--color-text);
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-top: 3px solid var(--color-primary); 
+}
+
+#title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--color-secondary); 
+}
+
+#description {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--color-text-subtle);
+}
+
+/* Card format for sections */
+.form-card {
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-card h2 {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.required {
+    color: var(--color-required);
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* Input, Select, Textarea common styles */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+#dropdown,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--color-text);
+    background-color: #3d465c; 
+    border: 1px solid #55607c;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-subtle);
+    opacity: 0.7;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 8px rgba(157, 77, 237, 0.6); 
+}
+
+/* Radio and Checkbox specific styles */
+.radio-group label,
+.checkbox-group label {
+    display: flex; 
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--color-secondary); 
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+}
+
+/* Submit Button styling */
+.submit-container {
+    text-align: center;
+}
+
+.submit-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-background); 
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 255, 200, 0.4);
+}
+
+.submit-btn:hover {
+    background-color: #00e0b4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 200, 0.6);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .main-wrapper {
+        padding: 0 10px;
+    }
+    
+    .form-card {
+        padding: 20px;
+    }
+
+    #title {
+        font-size: 1.6rem;
+    }
+    
+    .header-content {
+        padding: 15px;
+    }
+}

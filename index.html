@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT Focus Survey - Card Format</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header-content">
+            <h1 id="title">IT Student Focus and Aspirations Survey</h1>
+            <p id="description">A quick assessment of core interests and career paths among BSIT students.</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-card">
+                <h2>1. Identity & Academic Status</h2>
+                
+                <div class="form-group">
+                    <label id="name-label" for="name">Full Name <span class="required">*</span></label>
+
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Your full name" 
+                        required 
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label id="email-label" for="email">Institutional Email <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="example@university.edu" 
+                        required 
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label id="number-label" for="number">Current Academic Year (1-4)</label>
+                    <input 
+                        type="number" 
+                        id="number" 
+                        name="academic-year" 
+                        min="1" 
+                        max="4" 
+                        placeholder="Enter your year level" 
+                    />
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h2>2. Specialization & Tools</h2>
+
+                <div class="form-group">
+                    <label for="dropdown">Primary Career Interest Field</label>
+                    <select id="dropdown" name="specialization" required>
+                        <option disabled selected value>Choose one career path</option>
+                        <option value="software-eng">Software Engineering</option>
+                        <option value="cybersec">Cybersecurity & Networking</option>
+                        <option value="data-analyst">Data Science / AI</option>
+                        <option value="it-manager">IT Management / Consultant</option>
+                        <option value="game-dev">Game Development</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>What is your preferred programming paradigm?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="paradigm" value="object-oriented" checked> Object-Oriented (Java, Python)
+                        </label>
+                        <label>
+                            <input type="radio" name="paradigm" value="functional"> Functional (Haskell, Lisp)
+                        </label>
+                        <label>
+                            <input type="radio" name="paradigm" value="procedural"> Procedural (C, Pascal)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Which modern technologies are you interested in? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="technology" value="serverless"> Serverless Architecture
+                        </label>
+                        <label>
+                            <input type="checkbox" name="technology" value="AR/VR"> Augmented Reality (AR/VR)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="technology" value="edge-computing"> Edge Computing
+                        </label>
+                        <label>
+                            <input type="checkbox" name="technology" value="low-code"> Low-Code/No-Code Platforms
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h2>3. Feedback</h2>
+                <div class="form-group">
+                    <label for="comments">Suggestions for curriculum/lab improvements:</label>
+                    <textarea 
+                        id="comments" 
+                        name="comments" 
+                        rows="5" 
+                        placeholder="e.g., more hands-on labs for networking, updated software..."
+                    ></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group submit-container">
+                <button type="submit" id="submit" class="submit-btn">Complete & Submit Survey</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
